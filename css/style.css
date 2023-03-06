@@ -255,6 +255,245 @@ add height to container from their height + margin */
 
 /* The drop down arrows in the spans are hidden 
 at higher screen widths */
-span {
+.arrow {
 	display: none;
+}
+
+/* ============================= */
+/* ============BODY============= */
+/* ============================= */
+
+body {
+	background-color: #191919;
+}
+
+.content {
+	display: flex;
+}
+
+main {
+	width: 66.6%;
+	position: relative;
+	overflow: hidden;
+}
+
+main:hover h1, .hero-words:hover h1 {
+	color: rgb(255, 80, 0);
+	transition-duration: 0.5s;
+}
+
+main:hover img {
+	transform: scale(1.05);
+	transition-property: transform;
+	transition-timing-function: ease-in;
+	transition-duration: 3s;
+}
+
+.hero-img {
+	width: 100%;
+	height: auto;
+	mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(27, 27, 27, 1) 60%);
+	-webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(27, 27, 26, 1) 60%);
+}
+
+.hero-words {
+	position: absolute;
+	bottom: 8.5em;
+	margin-left: 2.3em;
+}
+
+h1 {
+	box-sizing: border-box;
+	font-family: 'Acumin Pro Condensed', Helvetica, Arial, sans-serif;
+	font-size: 4.5em;
+	color: white;
+	text-decoration: none;
+}
+
+.hero-link {
+	display: block;
+	text-decoration: none;
+    width: 100%;
+}
+
+.series>img {
+	margin-left: 0.25em;
+	max-height: 1.5em;
+}
+
+.hero-button {
+	position: absolute;
+	bottom: 6em;
+	left: 2.86em;
+	background-color: rgb(255, 80, 0);
+	border-radius: 3px;
+	border: none;
+	margin-top: 1.25em;
+	border-right: 1px solid #191919;
+	border-bottom: 1px solid #191919;
+}
+
+.hero-button>a {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.6em 1.5em 0.6em;
+	font-family: 'Roboto Condensed';
+	font-weight: 700;
+	font-size: 1rem;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+aside {
+	width: 33.3%;
+	display: flex;
+	flex-direction: column;
+}
+
+aside {
+	overflow: hidden;
+}
+
+.aside-container:hover {
+	transform: scale(1.05);
+	transition-property: transform;
+	transition-timing-function: ease-in;
+	transition-duration: 3s;
+}
+
+.aside-container:hover h2 {
+	color: rgb(255, 80, 0);
+}
+
+.aside-container {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+}
+
+.aside-container>img {
+	width: 100%;
+	mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(27, 27, 27, 1) 60%);
+	-webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(27, 27, 26, 1) 60%);
+}
+
+.aside-text {
+	position: absolute;
+	bottom: 1.5em;
+	left: 1em;
+}
+
+h3 {
+	font-size: 1em;
+	color: white;
+	font-family: 'Acumin Pro Light';
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.25em;
+	color: white;
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 700;
+}
+
+/* ============================= */
+/* =======MEDIA-QUERIES========= */
+/* ============================= */
+
+@media (max-width: 74.9em) {
+
+	/* Hides lists, leaving logo + search */
+	.nav-lists {
+		display: none;
+	}
+
+	nav {
+		height: 2.5em;
+	}
+
+	/* Makes visible and adds margin to the hamburger.
+	As we have space-between set the 3 elements
+	go left, centre, and right */
+	.hamburger,
+	.burger-row {
+		display: block;
+		margin-left: 0.45em;
+	}
+
+	.Dirtfish-Logo {
+		margin-left: auto;
+	}
+
+	.Dirtfish-Logo img {
+		max-height: 12.5px;
+		margin: 0 auto;
+	}
+
+	/* ============================= */
+	/* =========DROP-DOWN=========== */
+	/* ============================= */
+
+	/* Set header relative so drop-down can be set below
+	it with absolute positioning. */
+	.page-header {
+		position: relative;
+	}
+
+	/* Set the lists to go in a column and take up half the
+	page width. Set as position absolute to move them. */
+	.nav-lists {
+		display: block;
+		position: absolute;
+		top: 100%;
+		width: 50%;
+		padding-left: 25%;
+		padding-right: 25%;
+		background-color: #191919;
+		z-index: 1;
+	}
+
+	ul {
+		flex-direction: column;
+	}
+
+	/* Psuedo-element to add a line between the uls */
+	.right-list::before {
+		content: '';
+		box-sizing: border-box;
+		height: 0.15em;
+		background-color: white;
+		margin: 0.75em 0.7em;
+
+	}
+
+	li a {
+		width: 100%;
+		margin: 1em 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.arrow {
+		display: inline-block;
+
+	}
+
+
+	h1 {
+		font-size: 3em;
+	}
+
+}
+
+@media (max-width: 30em) {
+
+	.open .nav-lists {
+		width: 100%;
+		padding: 0;
+	}
+
 }
