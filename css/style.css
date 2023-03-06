@@ -356,7 +356,7 @@ aside {
 	overflow: hidden;
 }
 
-.aside-container:hover {
+.aside-container:hover img {
 	transform: scale(1.05);
 	transition-property: transform;
 	transition-timing-function: ease-in;
@@ -404,7 +404,7 @@ h2 {
 /* =======MEDIA-QUERIES========= */
 /* ============================= */
 
-@media (max-width: 74.9em) {
+@media (max-width: 75em) {
 
 	/* Hides lists, leaving logo + search */
 	.nav-lists {
@@ -439,7 +439,7 @@ h2 {
 
 	/* Set header relative so drop-down can be set below
 	it with absolute positioning. */
-	.open {
+	.page-header, .open {
 		position: relative;
 	}
 
@@ -489,7 +489,7 @@ h2 {
 
 }
 
-@media (max-width: 30em) {
+@media (max-width: 45em) {
 
 	.open .nav-lists {
 		width: 100%;
@@ -504,11 +504,38 @@ h2 {
 		width: 100%;
 	}
 
+	.hero-img {
+		height: 20.5em;
+		object-fit: cover;
+	}
+
+	.hero-words {
+		margin-left: 1.5em;
+		bottom: 1.5em;
+	}
+
+	.hero-button {
+		display: none;
+	}
+
 	aside {
 		width: 100%;
 	}
 
-	h2 {
-		font-size: 1rem;
+	
+
+@media (max-width: 30em) {
+	
+	h1 {
+		font-size: 2.75em;
 	}
+	
+	h2 {
+		font-size: 1.1rem;
+	}
+
+	h3 {
+		font-size: 0.75rem;
+	}
+}
 }
