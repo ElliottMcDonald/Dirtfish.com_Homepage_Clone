@@ -439,7 +439,7 @@ h2 {
 
 	/* Set header relative so drop-down can be set below
 	it with absolute positioning. */
-	.page-header {
+	.open {
 		position: relative;
 	}
 
@@ -491,7 +491,7 @@ h2 {
 
 @media (max-width: 30em) {
 
-	.open .nav-lists {
+	.nav-lists {
 		width: 100%;
 		padding: 0;
 	}
