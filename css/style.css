@@ -445,7 +445,7 @@ h2 {
 
 	/* Set the lists to go in a column and take up half the
 	page width. Set as position absolute to move them. */
-	.nav-lists {
+	.open .nav-lists {
 		display: block;
 		position: absolute;
 		top: 100%;
@@ -491,9 +491,24 @@ h2 {
 
 @media (max-width: 30em) {
 
-	.nav-lists {
+	.open .nav-lists {
 		width: 100%;
 		padding: 0;
 	}
 
+	.content {
+		flex-direction: column;
+	}
+
+	main {
+		width: 100%;
+	}
+
+	aside {
+		width: 100%;
+	}
+
+	h2 {
+		font-size: 1rem;
+	}
 }
