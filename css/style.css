@@ -511,6 +511,7 @@ h2 {
 
 	.hero-words {
 		margin-left: 1.5em;
+		margin-right: 1.5em;
 		bottom: 1.5em;
 	}
 
@@ -520,6 +521,11 @@ h2 {
 
 	aside {
 		width: 100%;
+	}
+
+	.aside-text {
+		margin-left: 1.5em;
+		margin-right: 1.5em;
 	}
 
 	
